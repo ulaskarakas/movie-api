@@ -6,8 +6,7 @@ const logger = require('morgan');
 
 const indexRouter = require('./routes/index');
 const movie = require('./routes/movies');
-//// movies.js entegrasyonu
-const movies = require('./routes/movies');
+const director = require('./routes/directors');
 
 //// MongoDB bağlantısı
 const db = require('./helper/db.js')();
@@ -26,6 +25,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/api/movies', movie);
+app.use('/api/directors', director);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
