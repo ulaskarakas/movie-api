@@ -44,25 +44,6 @@ router.get('/', (req, res) => {
 //Create a new movie
 router.post('/', (req, res, next) => {
 
-    /*
-    const { title, category, country, year, imdb_score} = req.body;
-    const movie = new Movie({
-        title: title,
-        category: category,
-        country: country,
-        year: year,
-        imdb_score: imdb_score
-    });
-
-    movie.save((err, data) => {
-        if (err){
-            res.json(err);
-        } else {
-            res.json(data);
-        }
-    });
-    */
-
     const movie = new Movie(req.body);
 
     const promise = movie.save();

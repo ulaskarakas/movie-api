@@ -5,6 +5,7 @@ const movieSchema = new Schema({
     title: {
         type: String,
         required: [true, "{PATH} alanı zorunludur."],
+        unique: true,
         maxlength: [100, "{PATH} alanı, en çok {MAXLENGTH} karakterden oluşmalıdır."],
         minlength: [2, "{PATH} alanı, en az {MINLENGTH} karakterden oluşmalıdır."]
     },

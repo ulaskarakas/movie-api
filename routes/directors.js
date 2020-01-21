@@ -55,20 +55,6 @@ router.get('/', (req, res) => {
 
 });
 
-/*
-router.get('/', (req, res) => {
-
-  const promise = Director.find({ });
-
-  promise.then((data) => {
-    res.json(data);
-  }).catch((err) => {
-    res.json(err);
-  });
-
-});
-*/
-
 //Create a new director
 router.post('/', (req, res, next) => {
 
@@ -137,19 +123,6 @@ router.get('/:director_id', (req, res) => {
   });
 
 });
-
-/*
-router.get('/:director_id', (req, res, next) => {
-  const promise = Director.findById(req.params.director_id);
-  promise.then((director) => {
-    if (!director)
-      next({ message: 'The movie was not found!', code: 99 });
-    res.json(director);
-  }).catch((err) => {
-    res.json(err);
-  });
-});
-*/
 
 //Update a director with new info.
 router.put('/:director_id', (req, res, next) => {
