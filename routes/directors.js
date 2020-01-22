@@ -62,7 +62,7 @@ router.post('/', (req, res, next) => {
   const promise = director.save();
 
   promise.then((data) => {
-    res.json({ status: 1 });  //res.json(data);
+    res.json(data); //res.json({ status: 1 });
   }).catch((err) => {
     res.json(err);
   });
