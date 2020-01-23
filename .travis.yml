@@ -3,6 +3,7 @@ node_js:
   - 12
 before_install:
   - npm install
-  - export NODE_ENV=production
+  - npm audit fix
+  - export NODE_ENV=development
 script:
   - npm test
