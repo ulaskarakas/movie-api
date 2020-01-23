@@ -1,9 +1,0 @@
-language: node_js
-node_js:
-  - 12
-before_install:
-  - npm install
-  - npm audit fix
-  - export NODE_ENV=development
-script:
-  - npm test
